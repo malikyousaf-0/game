@@ -22,7 +22,7 @@ function App() {
               </Link>
             </div>
           </div>
-          x
+
           <Routes>
             <Route path="/" element={<ScrachGame />} />
             <Route path="/slot" element={<SlotGame />} />

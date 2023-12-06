@@ -29,6 +29,7 @@ export default function ScrachGame() {
     <>
       <div className="scrach mt-5" style={{ position: "relative" }}>
         <h1 className="text-center heading">SCRACH GAME</h1>
+        <h2 className="text-center">Scrach All</h2>
         <div className="container mt-5">
           <div className="row">
             {[...Array(4)].map((_, i) => (
@@ -54,7 +55,6 @@ export default function ScrachGame() {
         </div>
         <div className="button text-center mt-5">
           <button onClick={reset} className="btn btn-primary ">
-            {" "}
             Try Again
           </button>
         </div>

@@ -24,11 +24,13 @@ export default function SlotGame() {
     } else setResult("");
   }, [checkvalue]);
 
+  // spin
+
   return (
     <>
       <div className="slot">
         <div className="container text-center">
-          <h1>Slot game</h1>
+          <h1 className="heading">Slot game</h1>
           <div className="row mt-5">
             <div className="col-md-4">
               <img
@@ -53,9 +55,9 @@ export default function SlotGame() {
             </div>
           </div>
           <button className="btn btn-primary mt-5" onClick={checkvalue}>
-            check
+            PLAY
           </button>
-          <h1>{result}</h1>
+          <h1 className="fw-b mt-5">{result}</h1>
         </div>
       </div>
     </>
