@@ -117,7 +117,7 @@ function init() {
 export default function Back(props) {
   useEffect(() => {
     return init();
-  }, []);hjkhjkhjk
+  }, []);
   return (
     <span>
       <div

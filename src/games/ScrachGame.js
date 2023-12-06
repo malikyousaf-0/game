@@ -13,7 +13,6 @@ export default function ScrachGame() {
   const settings = {
     width: 200,
     height: 200,
-    borderRadius: 20,
     image: couponCover,
     finishPercent: 50,
     // onComplete: handleScratchComplete,
@@ -49,10 +48,12 @@ export default function ScrachGame() {
               ))}
             </div>
           </div>
-          <button onClick={reset} className="btn btn-primary">
-            {" "}
-            Try Again
-          </button>
+          <div className="button text-center mt-5">
+            <button onClick={reset} className="btn btn-primary ">
+              {" "}
+              Try Again
+            </button>
+          </div>
         </div>
       </Back>
     </>
