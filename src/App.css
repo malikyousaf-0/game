@@ -11,17 +11,46 @@
   border-radius: 5%;
   color: wheat;
 }
+.btn {
+  background-color: yellow;
+  color: black;
+  border: none;
+  font-weight: bold;
+  &:hover {
+    background-color: rgb(130, 117, 20);
+  }
+  &:focus {
+    background-color: rgb(134, 134, 24);
+  }
+}
+.heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(219, 219, 37);
+  font-size: 3rem;
+  font-weight: bold;
+}
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #canvas {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #04bbd3;
+}
+@media screen and (max-width: 880px) {
+  #canvas {
+    height: 150vh;
+  }
+}
+@media screen and (max-width: 580px) {
+  #canvas {
+    height: 200vh;
+  }
 }

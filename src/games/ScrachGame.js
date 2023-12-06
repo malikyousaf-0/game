@@ -5,6 +5,7 @@ import Back from "./Back";
 
 export default function ScrachGame() {
   const [value, setValue] = useState(0);
+  const [win, setwin] = useState("");
 
   useEffect(() => {
     setValue(Math.floor(Math.random() * 4) + 1);
@@ -16,6 +17,8 @@ export default function ScrachGame() {
     image: couponCover,
     finishPercent: 50,
     // onComplete: handleScratchComplete,
+    // onComplete: () => divContent === "you win" && alert("ldfkjsakl"),
+    // onComplete: () => alert(win),
   };
 
   const reset = () => {
@@ -24,16 +27,16 @@ export default function ScrachGame() {
 
   return (
     <>
-      <Back>
-        <div className="scrach mt-5" style={{ position: "relative" }}>
-          <h1 className="text-center">SCRACH GAME</h1>
-          <div className="container mt-5">
-            <div className="row">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="col-sm-6 col-md-4 col-lg-3">
+      <div className="scrach mt-5" style={{ position: "relative" }}>
+        <h1 className="text-center heading">SCRACH GAME</h1>
+        <div className="container mt-5">
+          <div className="row">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="col-sm-6 col-md-4 col-lg-3 ">
+                <div className="boxOuter m-2">
                   <ScratchCard {...settings}>
                     <div
-                      className={`box h-100 text-center d-flex justify-content-center align-items-center ${
+                      className={`box h-100  d-flex justify-content-center align-items-center ${
                         i + 1 === value
                           ? "bg-dark shadow"
                           : "bg-light text-dark shadow"
@@ -45,17 +48,17 @@ export default function ScrachGame() {
                     </div>
                   </ScratchCard>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="button text-center mt-5">
-            <button onClick={reset} className="btn btn-primary ">
-              {" "}
-              Try Again
-            </button>
+              </div>
+            ))}
           </div>
         </div>
-      </Back>
+        <div className="button text-center mt-5">
+          <button onClick={reset} className="btn btn-primary ">
+            {" "}
+            Try Again
+          </button>
+        </div>
+      </div>
     </>
   );
 }
